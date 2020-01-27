@@ -156,7 +156,23 @@
 
 # 將物件轉成字串表示
 # 適合除錯
-x=[1,2,3,4,[5,6]]
-print("this list is:"+repr(x))
-print(repr(len))#正式字串表示法,給python讀取的
-print(str(len))#非正式字串表示法,給人看得
+# x=[1,2,3,4,[5,6]]
+# print("this list is:"+repr(x))
+# print(repr(len))#正式字串表示法,給python讀取的
+# print(str(len))#非正式字串表示法,給人看得
+
+# 字串格式化
+# x="{} is my {},so I decide to {}".format("Tom","hero","jump")
+# x="{{Tom}} is my {},so I decide to {}".format("hero","jump")
+# x="{1} is my {0},so I decide to {2},say hi to {1}".format("hero","Tom","jump")
+# x="{Name} is my {Title},I decide to {Action}".format(Name="Tom",Title="hero",Action="jump")
+# x="{0} is the food of {user[1]}".format(
+#     "Ambrosia",#編號參數要放前面
+#     user=["mem","the gods","others"]
+#     )
+# print(x)
+# x="{1:{0}}".format(3,4)
+# x="{0:$>5}".format(3)
+# x="{a:{b}}".format(a=1,b=5)
+# x="{a:{b}}:{0:$>5}".format(3,a=1,b=5)
+# print(x)
