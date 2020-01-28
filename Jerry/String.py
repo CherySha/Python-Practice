@@ -111,7 +111,7 @@
 # print(y)
 # re模組提供更強大的替換方式
 
-# 一次多替換多字串:maketrans()+translate()
+# 一次多替換多字串:make s()+translate()
 # x="AAABBBCCCDDD"
 # table=x.maketrans("ABCD","QWER")
 # print(x.translate(table))
@@ -176,3 +176,45 @@
 # x="{a:{b}}".format(a=1,b=5)
 # x="{a:{b}}:{0:$>5}".format(3,a=1,b=5)
 # print(x)
+
+# x="%s is the king of %s.and I am a %s" % ("Kim","love","superman")
+# print(x)
+
+# name="Kim"
+# title="superman"
+# num=3.1415
+# x=f"{name:10} is {title} with {num:10.2}"
+# print(x)
+
+# bytes物件:類似字串物件，0-255的整數序列，用來處理二進位資料(圖片、音樂...)
+# 不能與字串結合使用，要互相轉換(encode/decode)
+# x="中"
+# xb=x.encode()
+# xa=xb.decode()
+# print(xb)
+# print(xa)
+
+# 選擇編碼格式
+# x="測試".encode("utf-8")
+# xd=x.decode("utf-8")
+# print(x)
+# print(xd)
+
+# print() 進階用法
+# 多參數:預設以空白相隔，sep指定相隔符號
+# print("a","b","c")
+# print("a","b","c",sep="-")
+# # 預設以換行結尾，end指定結尾符號
+# print("a","b","c",end="|")
+# print("a","b","c",end="。")
+# # 預設輸出到螢幕上，file指定輸出到哪(例如檔案)
+# print("a","b","c",file=open("testfile.txt","w"))
+
+x = ['"abc"', 'def', '"ghi"', '"klm"', 'nop']
+for item in x:
+    print(item.strip('"'))
+
+x="Mississippi"
+pos=x.rfind("p")
+print(pos)
+print(x[:pos]+x[pos+1:])
